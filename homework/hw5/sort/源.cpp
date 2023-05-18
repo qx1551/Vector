@@ -120,7 +120,7 @@ void test_sorting_algorithm(const string& name, void (*sorting_algorithm)(vector
     sorting_algorithm(nums);
     auto end = chrono::steady_clock::now(); chrono::duration<double, milli> elapsed_time = end - start;
     cout << name << ":" << endl;
-    cout << "ÔËÐÐÊ±¼ä: " << elapsed_time.count()*1000 << "Î¢Ãë" << endl;
+    cout << "è¿è¡Œæ—¶é—´: " << elapsed_time.count()*1000 << "å¾®ç§’" << endl;
 }
 
 int main() {
@@ -128,35 +128,35 @@ int main() {
 
     // Test on ordered sequence
     vector<int> nums1(10000);
-    cout << "µÚÒ»×éÊý¾Ý²âÊÔÊ±¼ä£º" << endl;
+    cout << "é¡ºåºåºåˆ—æ•°æ®æµ‹è¯•æ—¶é—´ï¼š" << endl;
     iota(nums1.begin(), nums1.end(), 1); 
-    test_sorting_algorithm("Ã°ÅÝÅÅÐò", bubble_sort, nums1);
-    test_sorting_algorithm("²åÈëÅÅÐò", insertion_sort, nums1);
-    test_sorting_algorithm("Ñ¡ÔñÅÅÐò", selection_sort, nums1);
-    test_sorting_algorithm("¹é²¢ÅÅÐò", merge_sort, nums1);
-    test_sorting_algorithm("¿ìËÙÅÅÐò", quick_sort, nums1);
+    test_sorting_algorithm("å†’æ³¡æŽ’åº", bubble_sort, nums1);
+    test_sorting_algorithm("æ’å…¥æŽ’åº", insertion_sort, nums1);
+    test_sorting_algorithm("é€‰æ‹©æŽ’åº", selection_sort, nums1);
+    test_sorting_algorithm("å½’å¹¶æŽ’åº", merge_sort, nums1);
+    test_sorting_algorithm("å¿«é€ŸæŽ’åº", quick_sort, nums1);
     cout << endl;
 
     // Test on reversed sequence
     vector<int> nums2(10000);
-    cout << "µÚ¶þ×éÊý¾Ý²âÊÔÊ±¼ä£º" << endl;
+    cout << "é€†åºåºåˆ—æ•°æ®æµ‹è¯•æ—¶é—´ï¼š" << endl;
     iota(nums2.rbegin(), nums2.rend(), 1); 
-    test_sorting_algorithm("Ã°ÅÝÅÅÐò", bubble_sort, nums2);
-    test_sorting_algorithm("²åÈëÅÅÐò", insertion_sort, nums2);
-    test_sorting_algorithm("Ñ¡ÔñÅÅÐò", selection_sort, nums2);
-    test_sorting_algorithm("¹é²¢ÅÅÐò", merge_sort, nums2);
-    test_sorting_algorithm("¿ìËÙÅÅÐò", quick_sort, nums2);
+    test_sorting_algorithm("å†’æ³¡æŽ’åº", bubble_sort, nums2);
+    test_sorting_algorithm("æ’å…¥æŽ’åº", insertion_sort, nums2);
+    test_sorting_algorithm("é€‰æ‹©æŽ’åº", selection_sort, nums2);
+    test_sorting_algorithm("å½’å¹¶æŽ’åº", merge_sort, nums2);
+    test_sorting_algorithm("å¿«é€ŸæŽ’åº", quick_sort, nums2);
     cout << endl;
 
     // Test on random sequence
     vector<int> nums3(10000);
-    cout << "µÚÈý×éÊý¾Ý²âÊÔÊ±¼ä£º" << endl;
+    cout << "éšæœºåºåˆ—æ•°æ®æµ‹è¯•æ—¶é—´ï¼š" << endl;
     generate(nums3.begin(), nums3.end(), [] { return rand(); });
-    test_sorting_algorithm("Ã°ÅÝÅÅÐò", bubble_sort, nums3);
-    test_sorting_algorithm("²åÈëÅÅÐò", insertion_sort, nums3);
-    test_sorting_algorithm("Ñ¡ÔñÅÅÐò", selection_sort, nums3);
-    test_sorting_algorithm("¹é²¢ÅÅÐò", merge_sort, nums3);
-    test_sorting_algorithm("¿ìËÙÅÅÐò", quick_sort, nums3);
+    test_sorting_algorithm("å†’æ³¡æŽ’åº", bubble_sort, nums3);
+    test_sorting_algorithm("æ’å…¥æŽ’åº", insertion_sort, nums3);
+    test_sorting_algorithm("é€‰æ‹©æŽ’åº", selection_sort, nums3);
+    test_sorting_algorithm("å½’å¹¶æŽ’åº", merge_sort, nums3);
+    test_sorting_algorithm("å¿«é€ŸæŽ’åº", quick_sort, nums3);
     cout << endl;
 
     return 0;
